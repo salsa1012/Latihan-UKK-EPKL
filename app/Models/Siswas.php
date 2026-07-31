@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Siswas extends Model
 {
-    use HasFactory;
+   use HasFactory;
+ protected $fillable = [
+ 'nis', 'nama', 'kelas', 'tanggal_mulai_pkl',
+ 'tanggal_selesai_pkl', 'perusahaan_id',
+ ];
 }
