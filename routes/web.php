@@ -2,17 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
 Route::get('/', function () {
-    return view('welcome');
+ return 'Selamat datang di Sistem E-PKL';
+});
+
+Route::get('/tentang', function () {
+    return 'Halaman ini berisi informasi tentang modul E-PKL sekolah.';
+});
+
+Route::get('/kontak', function () {
+    return 'Hubungi guru pembimbing PKL di ruang RPL.';
 });
