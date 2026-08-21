@@ -1,15 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PerusahaanController;
+use App\Http\Controllers\SiswaController;
 
 Route::get('/', function () {
  return 'Selamat datang di Sistem E-PKL';
 });
 
-Route::get('/tentang', function () {
-    return 'Halaman ini berisi informasi tentang modul E-PKL sekolah.';
-});
+Route::get('/perusahaan', [PerusahaanController::class, 'index'])
+    ->name('perusahaan.index');
 
-Route::get('/kontak', function () {
-    return 'Hubungi guru pembimbing PKL di ruang RPL.';
-});
+Route::get('/siswa', [SiswaController::class, 'index'])
+    ->name('siswa.index');
